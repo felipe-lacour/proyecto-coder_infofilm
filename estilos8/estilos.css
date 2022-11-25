@@ -1,0 +1,172 @@
+*{
+  margin: 0;
+}
+.gradiente{
+  height: 500px;
+  /* background-color: aqua; */
+  /* gradiente lineal (x->y, y ->x) */
+  /* background-image: linear-gradient(180deg, es la direccion que le doy puede ser top left and right tmb Red, Orange, Yellow, Green 30% 45%, Blue, Indigo, Violet); */
+  /* se puede ser mas preciso con la direccion del color, bottom right, bottom left, top right, top left :) */
+  /* se puede hacer aun maaaass especifico, uso grados en lugar de direcciones, en lugar de la direccion le pongo deg, que viene de degree */
+  /* se pueden colocar grados en valores positivos o negativos, en valores positivos inclina hacia la derecha, en valores negativos inclina hacia la izquierda */
+  /* tambien se puede ser mas preciso con el tamaño del color, dentro del parametro del color y antes de la coma se hace un espacio y se colocan 2 porcentajes que dan 100%, si le pongo 20% y 80% el verde arranca en el 20% del contenedor y termina en el 80% */
+  /* tmb puedo colocar colores en rgb y hexadecimal */
+  /* no solo tiene que ser lineal, puede ser circular */
+  background-image: radial-gradient(circle at bottom, Red, Orange, Yellow, Green , Indigo, Violet);
+  
+}
+
+.transformacion{
+  width: 250px;
+  height: 250px;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+
+  /* transform: translate(100px, 100px); */
+  /* se puede ser mas especifico */
+  /* transform: translateX(100px); */
+  /* transform: translateY(-100px);   para usar los dos a la vez tengo que usar el de arriba */
+  /* los valores negativos hacen la inversa visualmente, y se va para arriba */
+  /* transform: rotate(45deg); */
+  /* rotate no recive pixeles, recibe solo grados */
+  /* como en translate se puede ser mas especifico y rotar solo en un eje */
+
+  /* transform: scale(1); */
+  /* scale recibe solon numero enteros */
+  /* tmb se pueden hacer en los distintos ejes, lo unico que hacen es estirarse en ese eje */
+
+  /* nos permite hacer una deformacion de nuestro elemento */
+  /* funciona con ejes especificos, mejor usar el q no especifica */
+  /* transform: skew(45deg, 20deg); */
+  
+  /*  se puede hacer mas de un trasnform por elemento */
+  /* transform: 
+    translate(500px)
+    scale(1.5)
+    skew(20deg)
+    rotate(45deg)
+  ; */
+  /* para hacer mas sutil el cambio en hover, no se aplica en la pseudo clase, se tiene que aplicar en la clase principal */
+  /* recibe mas propiedades, retardo y forma en la que se transiciona */
+  /* propiedad, duracion, ritmo, retardo */
+  transition: all 1s 0.15s ease-in;
+}
+
+  /* transiciones */
+  /* pesudoclases: le van a agregar una funcionalidad a nuestra clase de css al momento de recibir alguna interaccion por parte de nnuestro usuario
+  por ejemplo, hover, active */
+.transformacion:hover{
+  transform: translate(1000px);
+  background-color: orange;
+  color: black;
+}
+
+input {
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 5px solid yellowgreen;
+  outline: none;
+  /* las propiedades que tengo en la clase principal tienen que matchear las del border para que las transiciones se hagan de una forma copada */
+  width: 300px;
+  transition: all 0.15s 0s ease-in;
+}
+
+input:focus{
+  border: 5px solid orangered;
+  width: 400px;
+}
+
+/* animaciones */
+.spinner{
+  margin: 100px;
+  width: 100px;
+  height: 100px;
+  border: 10px solid purple;
+  border-radius: 50%;
+  border-right-color: coral;
+/* le ponemos el nombre que le dimos al keyframe */
+  /* animation-name: mover; */
+  /* animation-duration: 1s; */
+  /* cantidad de veces que se realiza la animacion */
+  /* animation-iteration-count: infinite; */
+  /* como queremos que se comporte la animacion */
+  /* animation-timing-function: linear; */
+
+  /* todo lo de arriba resumido */
+  animation: mover 1s infinite linear;
+}
+/* es lo que nos va a dar una linea de tiempo para nuestra animacion */
+@keyframes mover{
+  0% {
+    transform: rotate(0);
+  }
+  /* 25%{
+    transform: rotate(90deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  75%{
+    transform: rotate(270deg);
+  } */
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* animacion numero2 */
+.animacion{
+  position: relative;
+}
+
+.bosque{
+  background-image: url('../recursos/bosque.png');
+  width: 720px;
+  height: 480px;
+  position: absolute;
+  top: 0;
+}
+
+.arboles{
+  background-image: url('../recursos/arboles.png');
+  width: 720px;
+  height: 480px;
+  background-size: 720px 480px;
+  background-position: bottom;
+  position: absolute;
+  top: 0;
+  animation: moverArboles 5s infinite linear;
+}
+
+@keyframes moverArboles {
+  0%{
+    background-position:0;
+  }
+  100%{
+    background-position: -520px;
+  }
+}
+
+.vikingo{
+  width: 250px;
+  height: 250px;
+  background-image: url('../recursos/vikingo.png');
+  position: absolute;
+  top: 150px;
+  left: 240px;
+  background-size: 100%;
+  animation: moverVikingo 0.5s infinite alternate;
+}
+
+@keyframes moverVikingo{
+  form {
+    top: 150px;
+  }
+  to{
+    top:130px;
+  }
+}

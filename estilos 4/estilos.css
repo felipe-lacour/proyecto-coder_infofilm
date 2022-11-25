@@ -1,0 +1,27 @@
+body {
+  background-color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tarjeta {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 20px 20px 20px; /* los valores siguen la aguja del reloj, arriba derecha abajo izquierda*/
+  /* padding-top: 50px; */ /* puedo ser mas especifico*/
+  /* si son solo dos valores los que pongo en padding, el primero es arriba y abajo y el segundo es derecha es izquierda */
+  border: 5px dotted black;
+  margin: 50px;
+  width: 400px; /* para especificarle un tamaño fijo de ancho en la pagina */
+  height: 400px; /* para especificarle un tamaño fijo de altura en la pagina */
+  display: inline-block;
+}
+.cursos__contenido {
+  /* display:inline; pierde margin, height y width */
+  /* display:block; no me permite tener dos elementos al lado */
+  display: inline-block;
+  /* display: inline-block; me permite juntar lo mejor de ambos mundos*/
+}
+
+.cursos__titulo {
+  display: inline-block;
+}

@@ -1,0 +1,46 @@
+section {
+  color: red;
+}
+/* selector por id */
+#parrafo-generico-1 {
+  color: aqua;
+}
+
+/* selector por clase */
+.subtitulo {
+  color: blue;
+}
+
+.bordes-redondos {
+  border-radius: 40px;
+}
+
+.borde {
+  border: 5px solid black;
+}
+
+footer {
+  color: beige;
+  background-color: darkgrey;
+}
+
+.footer-p {
+  color: black;
+}
+/* propiedades css */
+.logo {
+  color: #882626;
+  background-color: black;
+}
+
+.navbar{
+  list-style-type: none;
+  font-weight: bold;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-style: italic;
+  text-align: center;
+  font-size: 20px;
+} 
+.no-subrayado{
+  text-decoration: none;
+}

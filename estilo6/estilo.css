@@ -1,0 +1,82 @@
+.grid{
+  background-color: cadetblue;
+  height: 600px;
+  display: grid;
+
+  /* columnas */
+  grid-template-columns: repeat(2, 1fr);
+
+  /* filas */
+  grid-template-rows: repeat(2, 1fr);
+
+  /* posicionamiento dentro de la celda */
+  /* justify-items: center; */
+  /* align-items: flex-start; */
+
+  /* separacion entre celdas */
+  gap:15px;
+
+  /* posicionamiento de celdas como grupo */
+  /* horizontal */
+  /* justify-content: space-evenly; */
+/* vertical */
+/* align-content: space-around; */
+
+}
+
+.grid__item{
+  background-color: darkolivegreen;
+  color: white;
+  border: 2px solid darkgreen;
+  font-size: 30px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+.self{
+  /* horizontal */
+  justify-self: center;
+  /* vertical */
+  align-self: center;
+}
+
+/* grid areas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-size: 30px;
+  font-weight: bold;
+  /* medida viewport: ventana del navegador vh y vw */
+  /* usarlo en 100 me da un scroll horrible xd */
+  /* le saco el margin para sacarlo */
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+
+  grid-template-areas: 
+    "encabezado encabezado encabezado"
+    "contenido contenido  publicidad"
+    "pie-pagina pie-pagina ."
+  ;
+}
+
+header{
+  background-color:aqua;
+  grid-area: encabezado;
+}
+main{
+  background-color: blueviolet;
+  color: white;
+  grid-area: contenido;
+}
+aside{
+  background-color: chartreuse;
+  grid-area: publicidad;
+}
+footer{
+  background-color: red;
+  grid-area: pie-pagina;
+}

@@ -1,0 +1,45 @@
+.flex{
+  display: flex;
+  background-color: darkslateblue;
+  height: 500px;
+
+  /*direccion*/
+  /*flex-direction: row;*/
+
+  /* desbordamiento */
+  /*flex-wrap: nowrap;*/
+
+  /* shorthand */
+  flex-flow: row wrap;
+
+  /* posicionamiento en eje principal*/
+  justify-content: center;
+
+  /*posicionamiento en eje secundario*/
+  align-items: flex-start;
+
+  /*alinear elementos hijos como grupo*/
+  
+}
+
+.hijo1{
+  align-self: flex-start;
+}
+
+.hijo2{
+  align-self: center;
+}
+.hijo3{
+  align-self: flex-end;
+}
+
+.hijo4{
+  align-self: stretch;
+}
+.caja{
+  background-color: indianred;
+  border: 4px solid coral;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+}
